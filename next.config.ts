@@ -6,8 +6,8 @@ const nextConfig: NextConfig = {
 };
 
 export default withSentryConfig(nextConfig, {
-  org: "chungyoodam",
-  project: "javascript-nextjs",
+  org: process.env.SENTRY_ORG,
+  project: process.env.SENTRY_PROJECT,
   authToken: process.env.SENTRY_AUTH_TOKEN,
   widenClientFileUpload: true,
   tunnelRoute: "/monitoring",
